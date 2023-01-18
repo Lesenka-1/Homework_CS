@@ -3,5 +3,6 @@
 
 Console.WriteLine("Введите трёхзначное число");
 int num = Convert.ToInt32(Console.ReadLine());
+if (num<0) num=num*-1;
 int num1 = num / 10;
 Console.WriteLine(num1%10);
