@@ -20,4 +20,5 @@ string week(int num)
 }
 Console.WriteLine("Введите цифру от 1 до 7");
 int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(week(num));
+if (num<1 || num>7) Console.WriteLine("Ошибка ввода");
+else Console.WriteLine(week(num));
