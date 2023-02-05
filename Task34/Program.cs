@@ -4,12 +4,30 @@
 
 int[] array = new int[new Random().Next(1,11)];
 
-for (int i = 0; i < array.Length; i++)
+void FillArray(int[] collection, int minD, int maxD)
 {
-    array[i] = new Random().Next(100,1000);
-    Console.Write($"{array[i]}, ");
+    int length = collection.Length;
+    int index = 0;
+    while (index < length)
+    {
+        collection[index] = new Random().Next(minD, maxD+1);
+        index++;
+    }
 }
-Console.WriteLine("\b\b ");
+void PrintArray(int[] col)
+{
+    int count = col.Length;
+    int position = 0;
+    Console.Write("["); 
+    while (position < count)
+    {
+        Console.Write($"{col[position]},");
+        position++;
+    }
+    Console.WriteLine("\b]"); 
+}
+FillArray(array, 100, 1000);
+PrintArray(array);
 
 int res = 0;
 for (int i = 0; i < array.Length; i++)
